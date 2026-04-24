@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+    <style>
+        /* THE BACKGROUND & OVERALL STYLE */
+        body {
+            /* This creates a smooth, modern blue-grey gradient */
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* THE "CARD" CONTAINER */
+        /* This makes your content sit in a clean white box on top of the background */
+        .main-container {
+            background-color: white;
+            max-width: 850px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* SIMPLE STYLING FOR ELEMENTS */
+        nav ul { list-style: none; padding: 0; display: flex; gap: 15px; }
+        nav a { text-decoration: none; color: #007bff; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; }
+        img { border-radius: 8px; max-width: 100%; height: auto; }
+        form div { margin-bottom: 15px; }
+        input, textarea, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        input[type="radio"], input[type="checkbox"] { width: auto; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+<header> 
+        <h1>PARAGON ART SPACE</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Gallery</a></li>
+                <li><a href="#about">The Artist</a></li>
+                <li><a href="#contact">Inquiries</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <main>
+        <section id="home">
+            <h2>Current Collection</h2>
+            <p>Every stroke tells a story. Browse our latest original works available for your home or office.</p>
+
+            <div class="gallery-grid">
+                <article class="art-card">
+                    <h3>Sunset Over Shore</h3>
+                    <img src="sunset.jpg" alt="Oil painting of a beach at sunset" width="250">
+                    <p><em>Oil on Canvas, 24x36</em></p>
+                    <p><strong>$1,200</strong></p>
+                </article>
+
+                <article class="art-card">
+                    <h3>Urban Rhythm</h3>
+                    <img src="city.jpg" alt="Abstract city landscape painting" width="250">
+                    <p><em>Acrylic on Wood, 18x24</em></p>
+                    <p><strong>$850</strong></p>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about">
+             <h2>The Artist's Journey</h2>
+             <p>With over 10 years of experience, I specialize in capturing the interplay of light and shadow through vibrant colors.</p>
+             
+             <h3>Our Services:</h3>
+             <ul>
+                  <li>Original Gallery Paintings</li>
+                  <li>Custom Portrait Commissions</li>
+                  <li>Art Consultation for Interior Design</li>
+             </ul>
+
+             <h3>Pricing Guide:</h3>
+             <table border="1" style="width:100%; border-collapse: collapse;">
+                 <thead>
+                     <tr style="background-color: #f2f2f2;">
+                         <th>Size</th>
+                         <th>Canvas Type</th>
+                         <th>Starting Price</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td>Small (12" x 12")</td>
+                         <td>Stretched Canvas</td>
+                         <td>$250</td>
+                     </tr>
+                     <tr>
+                         <td>Large (36" x 48")</td>
+                         <td>Gallery Wrap</td>
+                         <td>$1,500+</td>
+                     </tr>
+                 </tbody>
+             </table>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2>Inquire About a Piece</h2>
+            <p>Interested in a commission or have a question about a specific painting? Reach out below.</p>
+            
+            <form action="/submit-form" method="POST">
+                <div>
+                     <label for="name">Name:</label><br>
+                     <input type="text" id="name" name="name" required>
+                </div><br>
+
+                <div>
+                     <label for="interest">Interested In:</label><br>
+                     <select id="interest" name="interest">
+                         <option value="purchase">Buying an Existing Piece</option>
+                         <option value="commission">Commissioning a New Work</option>
+                         <option value="visit">Studio Visit</option>
+                     </select>
+                </div><br>
+
+                <div>
+                     <label for="message">Details:</label><br>
+                     <textarea id="message" name="message" rows="4" style="width:100%"></textarea>
+                </div><br>
+
+                <button type="submit" style="padding: 10px 20px; cursor: pointer;">Send Inquiry</button>
+            </form>
+        </section>
+    </main> 
+
+    <footer> 
+        <p>&copy; 2026 Paragon Art Space. All rights reserved.</p>
+        <address>
+            Email: <a href="mailto:info@paragonartspame.com" style="color: lightblue;">info@paragonartspace.com</a><br>
+            123 Art Lane, Creative District
+        </address>
+        <p><small>Last updated: <time datetime="2026-04-24">April 24, 2026</time></small></p>
+    </footer>
+
+</body>
+</html>
